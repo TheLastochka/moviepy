@@ -113,6 +113,7 @@ class FFMPEG_VideoWriter:
             cmd.extend([
                 '-pix_fmt', 'yuv420p'
             ])
+        cmd.extend(['--'])
         cmd.extend([
             filename
         ])

@@ -57,6 +57,7 @@ class FFMPEG_AudioWriter:
                + ['-strict', '-2']  # needed to support codec 'aac'
                + (['-ab', bitrate] if (bitrate is not None) else [])
                + (ffmpeg_params if ffmpeg_params else [])
+               + ['--']
                + [filename])
 
         popen_params = {"stdout": DEVNULL,
